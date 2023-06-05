@@ -6,353 +6,352 @@ import math
 
 def _initialize(owner):
     network = nodes.LogicNetwork()
-    CON0000 = nodes.ConditionMousePressedOn()
-    CON0001 = nodes.ConditionMouseTargeting()
-    PAR0002 = nodes.ParameterObjectProperty()
-    PAR0003 = nodes.ParameterArithmeticOp()
-    CON0004 = nodes.ConditionMouseScrolled()
-    ACT0005 = nodes.ActionSetGameObjectGameProperty()
-    CON0006 = nodes.ConditionMouseScrolled()
+    PAR0000 = nodes.ParameterArithmeticOp()
+    CON0001 = nodes.ConditionMouseScrolled()
+    ACT0002 = nodes.ActionSetGameObjectGameProperty()
+    CON0003 = nodes.ConditionMouseScrolled()
+    ACT0004 = nodes.ActionSetCameraFov()
+    CON0005 = nodes.ConditionKeyPressed()
+    ACT0006 = nodes.ActionToggleGameObjectGameProperty()
     ACT0007 = nodes.ActionSetCameraFov()
-    CON0008 = nodes.ConditionKeyPressed()
-    ACT0009 = nodes.ActionToggleGameObjectGameProperty()
-    ACT0010 = nodes.ActionSetCameraFov()
-    CON0011 = nodes.ConditionNot()
-    CON0012 = nodes.ConditionKeyPressed()
-    CON0013 = nodes.ConditionAnd()
-    CON0014 = nodes.ConditionMouseMoved()
-    PAR0015 = nodes.ParameterObjectProperty()
-    ACT0016 = nodes.ActionSetMouseCursorVisibility()
-    CON0017 = nodes.GE_OnInit()
+    CON0008 = nodes.ConditionNot()
+    CON0009 = nodes.ConditionKeyPressed()
+    CON0010 = nodes.ConditionAnd()
+    CON0011 = nodes.ConditionMouseMoved()
+    PAR0012 = nodes.ParameterObjectProperty()
+    ACT0013 = nodes.ActionSetMouseCursorVisibility()
+    CON0014 = nodes.GE_OnInit()
+    CON0015 = nodes.ConditionKeyPressed()
+    CON0016 = nodes.ConditionKeyPressed()
+    CON0017 = nodes.ConditionKeyPressed()
     CON0018 = nodes.ConditionKeyPressed()
-    CON0019 = nodes.ConditionKeyPressed()
-    CON0020 = nodes.ConditionKeyPressed()
-    CON0021 = nodes.ConditionKeyPressed()
+    ACT0019 = nodes.ActionApplyLocation()
+    ACT0020 = nodes.ActionApplyLocation()
+    ACT0021 = nodes.ActionApplyLocation()
     ACT0022 = nodes.ActionApplyLocation()
     ACT0023 = nodes.ActionApplyLocation()
-    ACT0024 = nodes.ActionApplyLocation()
-    ACT0025 = nodes.ActionApplyLocation()
-    ACT0026 = nodes.ActionApplyLocation()
-    CON0027 = nodes.ConditionKeyPressed()
-    PAR0028 = nodes.ParameterObjectProperty()
+    CON0024 = nodes.ConditionKeyPressed()
+    PAR0025 = nodes.ParameterObjectProperty()
+    PAR0026 = nodes.ParameterVector3Simple()
+    PAR0027 = nodes.ParameterVector3Simple()
+    PAR0028 = nodes.ParameterVector3Simple()
     PAR0029 = nodes.ParameterVector3Simple()
-    PAR0030 = nodes.ParameterVector3Simple()
+    PAR0030 = nodes.ParameterObjectProperty()
     PAR0031 = nodes.ParameterVector3Simple()
     PAR0032 = nodes.ParameterVector3Simple()
-    PAR0033 = nodes.ParameterObjectProperty()
-    PAR0034 = nodes.ParameterVector3Simple()
-    PAR0035 = nodes.ParameterVector3Simple()
-    ACT0036 = nodes.ActionApplyLocation()
-    CON0037 = nodes.ConditionKeyPressed()
-    ACT0038 = nodes.ActionSetGameObjectGameProperty()
+    ACT0033 = nodes.ActionApplyLocation()
+    CON0034 = nodes.ConditionKeyPressed()
+    ACT0035 = nodes.ActionSetGameObjectGameProperty()
+    PAR0036 = nodes.ParameterObjectProperty()
+    PAR0037 = nodes.ParameterArithmeticOp()
+    CON0038 = nodes.ConditionKeyPressed()
     PAR0039 = nodes.ParameterObjectProperty()
     PAR0040 = nodes.ParameterArithmeticOp()
     CON0041 = nodes.ConditionKeyPressed()
     PAR0042 = nodes.ParameterObjectProperty()
     PAR0043 = nodes.ParameterArithmeticOp()
-    CON0044 = nodes.ConditionKeyPressed()
-    PAR0045 = nodes.ParameterObjectProperty()
-    PAR0046 = nodes.ParameterArithmeticOp()
+    ACT0044 = nodes.ActionSetGameObjectGameProperty()
+    CON0045 = nodes.ConditionKeyPressed()
+    PAR0046 = nodes.ParameterObjectProperty()
     ACT0047 = nodes.ActionSetGameObjectGameProperty()
-    CON0048 = nodes.ConditionKeyPressed()
-    PAR0049 = nodes.ParameterObjectProperty()
-    ACT0050 = nodes.ActionSetGameObjectGameProperty()
-    PAR0051 = nodes.ParameterArithmeticOp()
-    ACT0052 = nodes.ActionSetGameObjectGameProperty()
-    CON0053 = nodes.ConditionKeyPressed()
-    ACT0054 = nodes.ActionSetGameObjectGameProperty()
-    ACT0055 = nodes.ActionSetCameraFov()
+    PAR0048 = nodes.ParameterArithmeticOp()
+    ACT0049 = nodes.ActionSetGameObjectGameProperty()
+    CON0050 = nodes.ConditionKeyPressed()
+    ACT0051 = nodes.ActionSetGameObjectGameProperty()
+    ACT0052 = nodes.ActionSetCameraFov()
+    PAR0053 = nodes.ParameterObjectProperty()
+    PAR0054 = nodes.ParameterArithmeticOp()
+    ACT0055 = nodes.ActionMouseLook()
     PAR0056 = nodes.ParameterObjectProperty()
-    PAR0057 = nodes.ParameterArithmeticOp()
-    ACT0058 = nodes.ActionMouseLook()
-    PAR0059 = nodes.ParameterObjectProperty()
-    CON0060 = nodes.ConditionKeyPressed()
-    ACT0061 = nodes.ActionSetGameObjectGameProperty()
-    CON0062 = nodes.ConditionKeyPressed()
-    ACT0063 = nodes.ActionSetGameObjectGameProperty()
+    CON0057 = nodes.ConditionKeyPressed()
+    ACT0058 = nodes.ActionSetGameObjectGameProperty()
+    CON0059 = nodes.ConditionKeyPressed()
+    ACT0060 = nodes.ActionSetGameObjectGameProperty()
+    PAR0061 = nodes.ParameterObjectProperty()
+    PAR0062 = nodes.ParameterArithmeticOp()
+    PAR0063 = nodes.ParameterArithmeticOp()
     PAR0064 = nodes.ParameterObjectProperty()
-    PAR0065 = nodes.ParameterArithmeticOp()
-    PAR0066 = nodes.ParameterArithmeticOp()
-    PAR0067 = nodes.ParameterObjectProperty()
-    CON0068 = nodes.ConditionOnUpdate()
-    ACT0069 = nodes.SetEeveeBloom()
-    ACT0070 = nodes.ActionToggleGameObjectGameProperty()
-    ACT0071 = nodes.ActionSetGameObjectVisibility()
-    PAR0072 = nodes.ParameterObjectProperty()
-    ACT0073 = nodes.ActionSetGameObjectVisibility()
-    CON0000.mouse_button = bge.events.LEFTMOUSE
-    CON0000.game_object = None
-    CON0001.game_object = None
-    PAR0002.game_object = "NLO:Pcontroller"
-    PAR0002.property_name = "fov"
-    PAR0003.operator = nodes.ParameterArithmeticOp.op_by_code("ADD")
-    PAR0003.operand_a = PAR0056
-    PAR0003.operand_b = 4.0
-    CON0004.wheel_direction = 2
-    ACT0005.condition = ACT0007.OUT
-    ACT0005.game_object = "NLO:Pcontroller"
-    ACT0005.property_name = "fov"
-    ACT0005.property_value = PAR0003
-    CON0006.wheel_direction = 1
-    ACT0007.condition = CON0004
+    CON0065 = nodes.ConditionOnUpdate()
+    ACT0066 = nodes.SetEeveeBloom()
+    ACT0067 = nodes.ActionToggleGameObjectGameProperty()
+    ACT0068 = nodes.ActionSetGameObjectVisibility()
+    PAR0069 = nodes.ParameterObjectProperty()
+    ACT0070 = nodes.ActionSetGameObjectVisibility()
+    CON0071 = nodes.ConditionMousePressedOn()
+    ACT0072 = nodes.ParameterPythonModuleFunction()
+    PAR0000.operator = nodes.ParameterArithmeticOp.op_by_code("ADD")
+    PAR0000.operand_a = PAR0053
+    PAR0000.operand_b = 4.0
+    CON0001.wheel_direction = 2
+    ACT0002.condition = ACT0004.OUT
+    ACT0002.game_object = "NLO:Pcontroller"
+    ACT0002.property_name = "fov"
+    ACT0002.property_value = PAR0000
+    CON0003.wheel_direction = 1
+    ACT0004.condition = CON0001
+    ACT0004.camera = "NLO:Camera"
+    ACT0004.fov = PAR0000
+    CON0005.key_code = bge.events.BKEY
+    CON0005.pulse = False
+    ACT0006.condition = CON0005
+    ACT0006.game_object = "NLO:Pcontroller"
+    ACT0006.property_name = "bloomTrue"
+    ACT0007.condition = CON0014
     ACT0007.camera = "NLO:Camera"
-    ACT0007.fov = PAR0003
-    CON0008.key_code = bge.events.BKEY
-    CON0008.pulse = False
-    ACT0009.condition = CON0008
-    ACT0009.game_object = "NLO:Pcontroller"
-    ACT0009.property_name = "bloomTrue"
-    ACT0010.condition = CON0017
-    ACT0010.camera = "NLO:Camera"
-    ACT0010.fov = PAR0056
-    CON0011.condition = PAR0072
-    CON0012.key_code = bge.events.IKEY
-    CON0012.pulse = False
-    CON0013.condition_a = CON0014
-    CON0013.condition_b = CON0011
-    CON0014.pulse = True
-    PAR0015.game_object = "NLO:Pcontroller"
-    PAR0015.property_name = "bloomTrue"
-    ACT0016.condition = CON0068
-    ACT0016.visibility_status = PAR0072
-    CON0018.key_code = bge.events.SKEY
+    ACT0007.fov = PAR0053
+    CON0008.condition = PAR0069
+    CON0009.key_code = bge.events.IKEY
+    CON0009.pulse = False
+    CON0010.condition_a = CON0011
+    CON0010.condition_b = CON0008
+    CON0011.pulse = True
+    PAR0012.game_object = "NLO:Pcontroller"
+    PAR0012.property_name = "bloomTrue"
+    ACT0013.condition = CON0065
+    ACT0013.visibility_status = PAR0069
+    CON0015.key_code = bge.events.SKEY
+    CON0015.pulse = True
+    CON0016.key_code = bge.events.DKEY
+    CON0016.pulse = True
+    CON0017.key_code = bge.events.LEFTSHIFTKEY
+    CON0017.pulse = True
+    CON0018.key_code = bge.events.WKEY
     CON0018.pulse = True
-    CON0019.key_code = bge.events.DKEY
-    CON0019.pulse = True
-    CON0020.key_code = bge.events.LEFTSHIFTKEY
-    CON0020.pulse = True
-    CON0021.key_code = bge.events.WKEY
-    CON0021.pulse = True
+    ACT0019.local = True
+    ACT0019.condition = CON0018
+    ACT0019.game_object = "NLO:U_O"
+    ACT0019.movement = PAR0026.OUTV
+    ACT0020.local = True
+    ACT0020.condition = CON0050
+    ACT0020.game_object = "NLO:U_O"
+    ACT0020.movement = PAR0027.OUTV
+    ACT0021.local = True
+    ACT0021.condition = CON0015
+    ACT0021.game_object = "NLO:U_O"
+    ACT0021.movement = PAR0032.OUTV
     ACT0022.local = True
-    ACT0022.condition = CON0021
+    ACT0022.condition = CON0016
     ACT0022.game_object = "NLO:U_O"
-    ACT0022.movement = PAR0029.OUTV
+    ACT0022.movement = PAR0031.OUTV
     ACT0023.local = True
-    ACT0023.condition = CON0053
+    ACT0023.condition = CON0017
     ACT0023.game_object = "NLO:U_O"
-    ACT0023.movement = PAR0030.OUTV
-    ACT0024.local = True
-    ACT0024.condition = CON0018
-    ACT0024.game_object = "NLO:U_O"
-    ACT0024.movement = PAR0035.OUTV
-    ACT0025.local = True
-    ACT0025.condition = CON0019
-    ACT0025.game_object = "NLO:U_O"
-    ACT0025.movement = PAR0034.OUTV
-    ACT0026.local = True
-    ACT0026.condition = CON0020
-    ACT0026.game_object = "NLO:U_O"
-    ACT0026.movement = PAR0031.OUTV
-    CON0027.key_code = bge.events.SPACEKEY
-    CON0027.pulse = True
-    PAR0028.game_object = "NLO:Pcontroller"
-    PAR0028.property_name = "walk-"
+    ACT0023.movement = PAR0028.OUTV
+    CON0024.key_code = bge.events.SPACEKEY
+    CON0024.pulse = True
+    PAR0025.game_object = "NLO:Pcontroller"
+    PAR0025.property_name = "walk-"
+    PAR0026.input_x = 0.0
+    PAR0026.input_y = 0.0
+    PAR0026.input_z = PAR0025
+    PAR0027.input_x = PAR0025
+    PAR0027.input_y = 0.0
+    PAR0027.input_z = 0.0
+    PAR0028.input_x = 0.0
+    PAR0028.input_y = PAR0025
+    PAR0028.input_z = 0.0
     PAR0029.input_x = 0.0
-    PAR0029.input_y = 0.0
-    PAR0029.input_z = PAR0028
-    PAR0030.input_x = PAR0028
-    PAR0030.input_y = 0.0
-    PAR0030.input_z = 0.0
-    PAR0031.input_x = 0.0
-    PAR0031.input_y = PAR0028
+    PAR0029.input_y = PAR0030
+    PAR0029.input_z = 0.0
+    PAR0030.game_object = "NLO:Pcontroller"
+    PAR0030.property_name = "walk+"
+    PAR0031.input_x = PAR0030
+    PAR0031.input_y = 0.0
     PAR0031.input_z = 0.0
     PAR0032.input_x = 0.0
-    PAR0032.input_y = PAR0033
-    PAR0032.input_z = 0.0
-    PAR0033.game_object = "NLO:Pcontroller"
-    PAR0033.property_name = "walk+"
-    PAR0034.input_x = PAR0033
-    PAR0034.input_y = 0.0
-    PAR0034.input_z = 0.0
-    PAR0035.input_x = 0.0
-    PAR0035.input_y = 0.0
-    PAR0035.input_z = PAR0033
-    ACT0036.local = True
-    ACT0036.condition = CON0027
-    ACT0036.game_object = "NLO:U_O"
-    ACT0036.movement = PAR0032.OUTV
-    CON0037.key_code = bge.events.UPARROWKEY
-    CON0037.pulse = True
-    ACT0038.condition = CON0037
-    ACT0038.game_object = "NLO:Pcontroller"
-    ACT0038.property_name = "walk-"
-    ACT0038.property_value = PAR0040
+    PAR0032.input_y = 0.0
+    PAR0032.input_z = PAR0030
+    ACT0033.local = True
+    ACT0033.condition = CON0024
+    ACT0033.game_object = "NLO:U_O"
+    ACT0033.movement = PAR0029.OUTV
+    CON0034.key_code = bge.events.UPARROWKEY
+    CON0034.pulse = True
+    ACT0035.condition = CON0034
+    ACT0035.game_object = "NLO:Pcontroller"
+    ACT0035.property_name = "walk-"
+    ACT0035.property_value = PAR0037
+    PAR0036.game_object = "NLO:Pcontroller"
+    PAR0036.property_name = "walk-"
+    PAR0037.operator = nodes.ParameterArithmeticOp.op_by_code("ADD")
+    PAR0037.operand_a = PAR0036
+    PAR0037.operand_b = -0.009999999776482582
+    CON0038.key_code = bge.events.UPARROWKEY
+    CON0038.pulse = True
     PAR0039.game_object = "NLO:Pcontroller"
-    PAR0039.property_name = "walk-"
+    PAR0039.property_name = "walk+"
     PAR0040.operator = nodes.ParameterArithmeticOp.op_by_code("ADD")
     PAR0040.operand_a = PAR0039
-    PAR0040.operand_b = -0.009999999776482582
-    CON0041.key_code = bge.events.UPARROWKEY
+    PAR0040.operand_b = 0.009999999776482582
+    CON0041.key_code = bge.events.DOWNARROWKEY
     CON0041.pulse = True
     PAR0042.game_object = "NLO:Pcontroller"
-    PAR0042.property_name = "walk+"
+    PAR0042.property_name = "walk-"
     PAR0043.operator = nodes.ParameterArithmeticOp.op_by_code("ADD")
     PAR0043.operand_a = PAR0042
     PAR0043.operand_b = 0.009999999776482582
-    CON0044.key_code = bge.events.DOWNARROWKEY
-    CON0044.pulse = True
-    PAR0045.game_object = "NLO:Pcontroller"
-    PAR0045.property_name = "walk-"
-    PAR0046.operator = nodes.ParameterArithmeticOp.op_by_code("ADD")
-    PAR0046.operand_a = PAR0045
-    PAR0046.operand_b = 0.009999999776482582
-    ACT0047.condition = CON0044
+    ACT0044.condition = CON0041
+    ACT0044.game_object = "NLO:Pcontroller"
+    ACT0044.property_name = "walk-"
+    ACT0044.property_value = PAR0043
+    CON0045.key_code = bge.events.DOWNARROWKEY
+    CON0045.pulse = True
+    PAR0046.game_object = "NLO:Pcontroller"
+    PAR0046.property_name = "walk+"
+    ACT0047.condition = CON0045
     ACT0047.game_object = "NLO:Pcontroller"
-    ACT0047.property_name = "walk-"
-    ACT0047.property_value = PAR0046
-    CON0048.key_code = bge.events.DOWNARROWKEY
-    CON0048.pulse = True
-    PAR0049.game_object = "NLO:Pcontroller"
-    PAR0049.property_name = "walk+"
-    ACT0050.condition = CON0048
-    ACT0050.game_object = "NLO:Pcontroller"
-    ACT0050.property_name = "walk+"
-    ACT0050.property_value = PAR0051
-    PAR0051.operator = nodes.ParameterArithmeticOp.op_by_code("ADD")
-    PAR0051.operand_a = PAR0049
-    PAR0051.operand_b = -0.009999999776482582
-    ACT0052.condition = CON0041
-    ACT0052.game_object = "NLO:Pcontroller"
-    ACT0052.property_name = "walk+"
-    ACT0052.property_value = PAR0043
-    CON0053.key_code = bge.events.AKEY
-    CON0053.pulse = True
-    ACT0054.condition = ACT0055.OUT
-    ACT0054.game_object = "NLO:Pcontroller"
-    ACT0054.property_name = "fov"
-    ACT0054.property_value = PAR0057
-    ACT0055.condition = CON0006
-    ACT0055.camera = "NLO:Camera"
-    ACT0055.fov = PAR0057
+    ACT0047.property_name = "walk+"
+    ACT0047.property_value = PAR0048
+    PAR0048.operator = nodes.ParameterArithmeticOp.op_by_code("ADD")
+    PAR0048.operand_a = PAR0046
+    PAR0048.operand_b = -0.009999999776482582
+    ACT0049.condition = CON0038
+    ACT0049.game_object = "NLO:Pcontroller"
+    ACT0049.property_name = "walk+"
+    ACT0049.property_value = PAR0040
+    CON0050.key_code = bge.events.AKEY
+    CON0050.pulse = True
+    ACT0051.condition = ACT0052.OUT
+    ACT0051.game_object = "NLO:Pcontroller"
+    ACT0051.property_name = "fov"
+    ACT0051.property_value = PAR0054
+    ACT0052.condition = CON0003
+    ACT0052.camera = "NLO:Camera"
+    ACT0052.fov = PAR0054
+    PAR0053.game_object = "NLO:Pcontroller"
+    PAR0053.property_name = "fov"
+    PAR0054.operator = nodes.ParameterArithmeticOp.op_by_code("SUB")
+    PAR0054.operand_a = PAR0053
+    PAR0054.operand_b = 4.0
+    ACT0055.axis = 1
+    ACT0055.condition = CON0010
+    ACT0055.game_object_x = "NLO:Pcontroller"
+    ACT0055.game_object_y = None
+    ACT0055.inverted = {'x': False, 'y': True}
+    ACT0055.sensitivity = PAR0056
+    ACT0055.use_cap_z = False
+    ACT0055.cap_z = mathutils.Vector((0.0, 0.0))
+    ACT0055.use_cap_y = False
+    ACT0055.cap_y = mathutils.Vector((0.0, 3.1241393089294434))
+    ACT0055.smooth = 0.25833332538604736
     PAR0056.game_object = "NLO:Pcontroller"
-    PAR0056.property_name = "fov"
-    PAR0057.operator = nodes.ParameterArithmeticOp.op_by_code("SUB")
-    PAR0057.operand_a = PAR0056
-    PAR0057.operand_b = 4.0
-    ACT0058.axis = 1
-    ACT0058.condition = CON0013
-    ACT0058.game_object_x = "NLO:Pcontroller"
-    ACT0058.game_object_y = None
-    ACT0058.inverted = {'x': False, 'y': True}
-    ACT0058.sensitivity = PAR0059
-    ACT0058.use_cap_z = False
-    ACT0058.cap_z = mathutils.Vector((0.0, 0.0))
-    ACT0058.use_cap_y = False
-    ACT0058.cap_y = mathutils.Vector((0.0, 3.1241393089294434))
-    ACT0058.smooth = 0.25833332538604736
-    PAR0059.game_object = "NLO:Pcontroller"
-    PAR0059.property_name = "sensitivity"
-    CON0060.key_code = bge.events.LEFTARROWKEY
-    CON0060.pulse = True
-    ACT0061.condition = CON0060
-    ACT0061.game_object = "NLO:Pcontroller"
-    ACT0061.property_name = "sensitivity"
-    ACT0061.property_value = PAR0066
-    CON0062.key_code = bge.events.RIGHTARROWKEY
-    CON0062.pulse = True
-    ACT0063.condition = CON0062
-    ACT0063.game_object = "NLO:Pcontroller"
-    ACT0063.property_name = "sensitivity"
-    ACT0063.property_value = PAR0065
+    PAR0056.property_name = "sensitivity"
+    CON0057.key_code = bge.events.LEFTARROWKEY
+    CON0057.pulse = True
+    ACT0058.condition = CON0057
+    ACT0058.game_object = "NLO:Pcontroller"
+    ACT0058.property_name = "sensitivity"
+    ACT0058.property_value = PAR0063
+    CON0059.key_code = bge.events.RIGHTARROWKEY
+    CON0059.pulse = True
+    ACT0060.condition = CON0059
+    ACT0060.game_object = "NLO:Pcontroller"
+    ACT0060.property_name = "sensitivity"
+    ACT0060.property_value = PAR0062
+    PAR0061.game_object = "NLO:Pcontroller"
+    PAR0061.property_name = "sensitivity"
+    PAR0062.operator = nodes.ParameterArithmeticOp.op_by_code("ADD")
+    PAR0062.operand_a = PAR0061
+    PAR0062.operand_b = 0.019999999552965164
+    PAR0063.operator = nodes.ParameterArithmeticOp.op_by_code("ADD")
+    PAR0063.operand_a = PAR0064
+    PAR0063.operand_b = -0.019999999552965164
     PAR0064.game_object = "NLO:Pcontroller"
     PAR0064.property_name = "sensitivity"
-    PAR0065.operator = nodes.ParameterArithmeticOp.op_by_code("ADD")
-    PAR0065.operand_a = PAR0064
-    PAR0065.operand_b = 0.019999999552965164
-    PAR0066.operator = nodes.ParameterArithmeticOp.op_by_code("ADD")
-    PAR0066.operand_a = PAR0067
-    PAR0066.operand_b = -0.019999999552965164
-    PAR0067.game_object = "NLO:Pcontroller"
-    PAR0067.property_name = "sensitivity"
-    ACT0069.condition = CON0068
-    ACT0069.value = PAR0015
-    ACT0070.condition = CON0012
-    ACT0070.game_object = "NLO:Pcontroller"
-    ACT0070.property_name = "uiTrue"
-    ACT0071.condition = ACT0070.OUT
-    ACT0071.game_object = "NLO:ui"
-    ACT0071.visible = PAR0072
-    ACT0071.recursive = True
-    PAR0072.game_object = "NLO:Pcontroller"
-    PAR0072.property_name = "uiTrue"
-    ACT0073.condition = CON0017
-    ACT0073.game_object = "NLO:ui"
-    ACT0073.visible = True
-    ACT0073.recursive = True
-    network.add_cell(CON0000)
-    network.add_cell(PAR0002)
-    network.add_cell(CON0004)
-    network.add_cell(CON0006)
-    network.add_cell(CON0008)
-    network.add_cell(CON0012)
-    network.add_cell(CON0014)
-    network.add_cell(CON0017)
-    network.add_cell(CON0019)
-    network.add_cell(CON0021)
-    network.add_cell(CON0027)
-    network.add_cell(PAR0033)
-    network.add_cell(PAR0035)
-    network.add_cell(CON0037)
-    network.add_cell(PAR0039)
-    network.add_cell(CON0041)
-    network.add_cell(CON0044)
-    network.add_cell(CON0048)
-    network.add_cell(CON0053)
-    network.add_cell(PAR0056)
-    network.add_cell(PAR0059)
-    network.add_cell(CON0062)
-    network.add_cell(PAR0064)
-    network.add_cell(PAR0067)
-    network.add_cell(ACT0070)
-    network.add_cell(PAR0072)
+    ACT0066.condition = CON0065
+    ACT0066.value = PAR0012
+    ACT0067.condition = CON0009
+    ACT0067.game_object = "NLO:Pcontroller"
+    ACT0067.property_name = "uiTrue"
+    ACT0068.condition = ACT0067.OUT
+    ACT0068.game_object = "NLO:ui"
+    ACT0068.visible = PAR0069
+    ACT0068.recursive = True
+    PAR0069.game_object = "NLO:Pcontroller"
+    PAR0069.property_name = "uiTrue"
+    ACT0070.condition = CON0014
+    ACT0070.game_object = "NLO:ui"
+    ACT0070.visible = True
+    ACT0070.recursive = True
+    CON0071.mouse_button = bge.events.LEFTMOUSE
+    CON0071.game_object = "NLO:char1"
+    ACT0072.condition = CON0071
+    ACT0072.module_name = "hideCollection"
+    ACT0072.module_func = ""
+    ACT0072.arg = nodes.Invalid()
     network.add_cell(CON0001)
-    network.add_cell(ACT0009)
+    network.add_cell(CON0003)
+    network.add_cell(CON0005)
+    network.add_cell(CON0009)
     network.add_cell(CON0011)
-    network.add_cell(PAR0015)
+    network.add_cell(CON0014)
+    network.add_cell(CON0016)
     network.add_cell(CON0018)
-    network.add_cell(ACT0024)
-    network.add_cell(PAR0028)
+    network.add_cell(CON0024)
     network.add_cell(PAR0030)
     network.add_cell(PAR0032)
-    network.add_cell(ACT0036)
-    network.add_cell(PAR0040)
-    network.add_cell(PAR0045)
-    network.add_cell(PAR0049)
-    network.add_cell(PAR0051)
-    network.add_cell(PAR0057)
-    network.add_cell(CON0060)
-    network.add_cell(PAR0065)
-    network.add_cell(CON0068)
-    network.add_cell(ACT0071)
-    network.add_cell(PAR0003)
+    network.add_cell(CON0034)
+    network.add_cell(PAR0036)
+    network.add_cell(CON0038)
+    network.add_cell(CON0041)
+    network.add_cell(CON0045)
+    network.add_cell(CON0050)
+    network.add_cell(PAR0053)
+    network.add_cell(PAR0056)
+    network.add_cell(CON0059)
+    network.add_cell(PAR0061)
+    network.add_cell(PAR0064)
+    network.add_cell(ACT0067)
+    network.add_cell(PAR0069)
+    network.add_cell(CON0071)
+    network.add_cell(PAR0000)
+    network.add_cell(ACT0004)
     network.add_cell(ACT0007)
-    network.add_cell(CON0013)
-    network.add_cell(CON0020)
-    network.add_cell(ACT0023)
+    network.add_cell(PAR0012)
+    network.add_cell(CON0015)
+    network.add_cell(ACT0021)
+    network.add_cell(PAR0025)
+    network.add_cell(PAR0027)
     network.add_cell(PAR0029)
-    network.add_cell(PAR0034)
+    network.add_cell(ACT0033)
+    network.add_cell(PAR0037)
     network.add_cell(PAR0042)
     network.add_cell(PAR0046)
-    network.add_cell(ACT0050)
-    network.add_cell(ACT0055)
-    network.add_cell(ACT0063)
-    network.add_cell(ACT0069)
-    network.add_cell(ACT0005)
-    network.add_cell(ACT0016)
-    network.add_cell(ACT0025)
+    network.add_cell(PAR0048)
+    network.add_cell(PAR0054)
+    network.add_cell(CON0057)
+    network.add_cell(PAR0062)
+    network.add_cell(CON0065)
+    network.add_cell(ACT0068)
+    network.add_cell(ACT0072)
+    network.add_cell(ACT0002)
+    network.add_cell(CON0008)
+    network.add_cell(ACT0013)
+    network.add_cell(ACT0020)
+    network.add_cell(PAR0026)
     network.add_cell(PAR0031)
+    network.add_cell(PAR0039)
     network.add_cell(PAR0043)
-    network.add_cell(ACT0052)
-    network.add_cell(ACT0058)
-    network.add_cell(PAR0066)
-    network.add_cell(ACT0010)
-    network.add_cell(ACT0026)
     network.add_cell(ACT0047)
-    network.add_cell(ACT0061)
+    network.add_cell(ACT0052)
+    network.add_cell(ACT0060)
+    network.add_cell(ACT0066)
+    network.add_cell(ACT0006)
+    network.add_cell(CON0017)
     network.add_cell(ACT0022)
-    network.add_cell(ACT0054)
-    network.add_cell(ACT0038)
-    network.add_cell(ACT0073)
+    network.add_cell(PAR0028)
+    network.add_cell(PAR0040)
+    network.add_cell(ACT0049)
+    network.add_cell(PAR0063)
+    network.add_cell(CON0010)
+    network.add_cell(ACT0023)
+    network.add_cell(ACT0044)
+    network.add_cell(ACT0055)
+    network.add_cell(ACT0070)
+    network.add_cell(ACT0019)
+    network.add_cell(ACT0051)
+    network.add_cell(ACT0035)
+    network.add_cell(ACT0058)
     owner["IGNLTree_Manager"] = network
     network._owner = owner
     network.setup()
