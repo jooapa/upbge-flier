@@ -10,12 +10,14 @@ def _initialize(owner):
     CON0001 = nodes.ConditionMousePressedOn()
     ACT0002 = nodes.SetLightColor()
     ACT0003 = nodes.ActionTranslate()
-    PAR0004 = nodes.ParameterVector3Simple()
+    PAR0004 = nodes.ParameterArithmeticOp()
     CON0005 = nodes.ConditionMousePressed()
-    ACT0006 = nodes.ActionApplyForce()
-    ACT0007 = nodes.ActionMoveTo()
-    PAR0008 = nodes.ParameterMouseData()
-    PAR0009 = nodes.ParameterArithmeticOp()
+    PAR0006 = nodes.ParameterMouseData()
+    ACT0007 = nodes.ActionTranslate()
+    ACT0008 = nodes.ActionMoveTo()
+    ACT0009 = nodes.ActionApplyLocation()
+    CON0010 = nodes.ConditionOnUpdate()
+    PAR0011 = nodes.ParameterVector3Simple()
     ACT0000.condition = None
     ACT0000.camera = None
     ACT0000.property = ""
@@ -31,34 +33,41 @@ def _initialize(owner):
     ACT0003.local = False
     ACT0003.vect = mathutils.Vector((0.5399999618530273, 0.0, 0.0))
     ACT0003.speed = 0.23999999463558197
-    PAR0004.input_x = PAR0008.MX
-    PAR0004.input_y = PAR0009
-    PAR0004.input_z = 0.0
+    PAR0004.operator = nodes.ParameterArithmeticOp.op_by_code("MUL")
+    PAR0004.operand_a = 0.0
+    PAR0004.operand_b = -1.0
     CON0005.mouse_button_code = bge.events.LEFTMOUSE
     CON0005.pulse = False
-    ACT0006.local = True
-    ACT0006.condition = ACT0007
-    ACT0006.game_object = "NLO:U_O"
-    ACT0006.force = mathutils.Vector((0.0, 0.0, 0.0))
-    ACT0007.condition = CON0005
+    ACT0007.condition = None
     ACT0007.moving_object = "NLO:U_O"
-    ACT0007.destination_point = PAR0004.OUTV
-    ACT0007.dynamic = False
+    ACT0007.local = True
+    ACT0007.vect = mathutils.Vector((0.0, 0.0, 0.0))
     ACT0007.speed = 100.0
-    ACT0007.distance = 0.0
-    PAR0009.operator = nodes.ParameterArithmeticOp.op_by_code("MUL")
-    PAR0009.operand_a = PAR0008.MY
-    PAR0009.operand_b = -1.0
+    ACT0008.condition = None
+    ACT0008.moving_object = "NLO:U_O"
+    ACT0008.destination_point = mathutils.Vector((0.0, 0.0, 0.0))
+    ACT0008.dynamic = False
+    ACT0008.speed = 1.0
+    ACT0008.distance = 0.5
+    ACT0009.local = True
+    ACT0009.condition = CON0005
+    ACT0009.game_object = "NLO:U_O"
+    ACT0009.movement = PAR0011.OUTV
+    PAR0011.input_x = PAR0006.MX
+    PAR0011.input_y = 0.0
+    PAR0011.input_z = 0.0
     network.add_cell(ACT0000)
     network.add_cell(ACT0003)
     network.add_cell(CON0005)
-    network.add_cell(PAR0008)
-    network.add_cell(CON0001)
-    network.add_cell(PAR0009)
-    network.add_cell(ACT0002)
-    network.add_cell(PAR0004)
     network.add_cell(ACT0007)
-    network.add_cell(ACT0006)
+    network.add_cell(CON0010)
+    network.add_cell(CON0001)
+    network.add_cell(PAR0004)
+    network.add_cell(ACT0008)
+    network.add_cell(ACT0002)
+    network.add_cell(PAR0006)
+    network.add_cell(PAR0011)
+    network.add_cell(ACT0009)
     owner["IGNLTree_NodeTree"] = network
     network._owner = owner
     network.setup()
